@@ -1,0 +1,16 @@
+.socialbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: right;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+}

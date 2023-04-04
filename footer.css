@@ -1,0 +1,10 @@
+/* footer box */
+footer {
+    color: whitesmoke;
+    text-align: center;
+    border: 1px solid black;
+    width: 100px;
+    background-color: black;
+}
+
+/* {border: 1px solid blue;}*/

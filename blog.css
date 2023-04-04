@@ -1,0 +1,222 @@
+/* {border: 1px solid red;}*/
+
+/* Pagination */
+body {
+    margin: 0;
+    padding: 0;      
+}
+
+/* Grid container for webpage */
+.container {
+    display:grid;
+    grid-template-columns: 30% 50% 10%;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+    "header header header"
+    "menu post social"
+    "menu post social"
+    "menu post social"
+    "menu post social"
+    "menu post social";
+    grid-gap: 10px;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    background-image: url("../images/titleimage.jpeg");
+    background-position:picture-in-picture; 
+}
+
+/* Flex container for title and subtitle */
+.header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+    grid-area: header;
+}
+
+/* box for title and subtitle */
+.title {
+    font: 40px fantasy;
+    color: darkred;
+}
+
+/* Grid container for nav/menu */
+.leftboxgrid {
+    display:grid;
+    grid-template-rows: 315px 350px;
+    grid-template-areas: 
+    "top"
+    "bottom";    
+    grid-area: menu;
+    grid-gap: 20px;
+    color: white;
+    width: 100%;
+    height: 100%;       
+}
+
+/* flex container to hold image */
+.navimg-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: top;      
+}
+
+/* container for author info and avatar*/
+.author {
+    width: 75%;
+    height:100%;        
+    box-shadow: 10px 5px 5px black;
+    background-color: rgba(139, 0, 0, 0.35);
+    border-radius: 50% 20% / 10% 40%;
+}
+
+/* author avatar */
+.author img {
+    width: 250px;
+    height: 200px;     
+}
+
+/* box for image */
+.img-box {
+    width: 400px;
+    height: 250px;
+    background-image: url("../images/writing.jpg");  
+}
+
+/* flex container for menu list */
+.listbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: bottom;    
+}
+
+/* box for menu list */
+.list {    
+    color: darkred;
+    font-style: bold;
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    padding:15px 20px;
+    text-align: center;
+    display: inline-block;         
+}
+
+/*Animation for links/buttons to blog post*/
+#hover {
+    transition-duration: 1s;
+}
+#hover:hover {
+    background-color: rgba(139, 0, 0, 0.25);
+}
+/*Animation for links/buttons to blog post*/
+
+/* flex container for blog post, title, author */
+.contentbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    border-left: 5px dotted black;  
+    border-right: 5px solid black; 
+    text-align: left;
+    grid-area: post;
+    color:white;      
+}
+
+/* box for blog post, title, author */
+.content {
+    width: 75%;
+    text-align: left;
+    font-size: 18px;
+   }
+
+   /* flex container for social media links */
+.socialbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: social;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 90%;
+}
+
+/* box for social media links */
+.social img {
+    width: 30px;
+    height: 30px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+}
+
+/*Below are styles for specific elements*/
+h1 {
+    font-size: 65px;
+    }
+h4 {
+    color: goldenrod;
+    font-variant: small-caps;
+    text-decoration:underline red;
+}
+
+h6 {
+    font-variant: small-caps;
+    color: white;
+    padding-left: 5px;
+}
+
+a {color: inherit;}
+
+figure {    
+    text-align: center;
+    color: rgba(255,255, 255, 0.65); 
+    text-shadow: 0px 0px 0px white;   
+}
+
+figcaption {
+    position: relative;
+    top: -25px;
+}
+
+/* media query for tablet */
+@media (min-width:768px) and (max-width: 1440px) {
+    .container {
+        display: block;
+        background-color: black;
+    }
+}
+
+/* media query for smartphone */
+@media (min-width:401px) and (max-width:767px){
+    .container {
+        display:block;
+        background-color: black;   
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
+    
+/* media query for smaller smartphone */
+@media (max-width:400px){
+    .container {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-areas:
+        "header"
+        "menu"
+        "post"
+        "social";           
+    }
+        
+    figcaption {font-size: 12px;}
+    img {max-width: 100%;}
+    h1 {font-size: 30px;}    
+}
